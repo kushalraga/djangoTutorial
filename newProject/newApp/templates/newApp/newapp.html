@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+New App Installed
+{% endblock %}
+
+{% block content %}
+<main>
+    <section id="app-installed">
+        <h2>New App Installed Successfully!</h2>
+        <p>Congratulations! Your new Django app has been installed and is running.</p>
+        <p>Here are a few things you can do next:</p>
+        <ul>
+            <li>Explore the different views and templates within your app.</li>
+            <li>Define your data models in <code>models.py</code>.</li>
+            <li>Create URL patterns in <code>urls.py</code> to map URLs to your views.</li>
+            <li>Start building your application's features and functionality.</li>
+        </ul>
+        <div class="call-to-action">
+            <p>Ready to get started?</p>
+            <a href="#" class="button">Explore Features</a>
+            <a href="/admin/" class="button admin-button">Go to Admin Panel</a>
+        </div>
+    </section>
+</main>
+{% endblock %}

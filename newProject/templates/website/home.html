@@ -1,67 +1,48 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Project</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Django Project!</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends "layout.html" %}
 
-    <main>
-        <section id="hero">
-            <h2>Discover the Power of Django</h2>
-            <p>Build robust and scalable web applications with the Django framework.</p>
-            <a href="#" class="button">Learn More</a>
-        </section>
+{% block title %}
+Home Page
+{% endblock %}
 
-        <section id="features">
-            <h2>Key Features</h2>
-            <div class="feature-list">
-                <div class="feature">
-                    <h3>Rapid Development</h3>
-                    <p>Django's design philosophy emphasizes reusability and "don't repeat yourself" (DRY) principles, leading to faster development cycles.</p>
-                </div>
-                <div class="feature">
-                    <h3>Batteries Included</h3>
-                    <p>Django comes with a lot of built-in features, such as an ORM, admin interface, and templating engine, making it ready for many common web development tasks.</p>
-                </div>
-                <div class="feature">
-                    <h3>Security Focused</h3>
-                    <p>Django helps developers avoid many common security mistakes by providing built-in protection against threats like cross-site scripting (XSS) and SQL injection.</p>
-                </div>
-                <div class="feature">
-                    <h3>Scalability</h3>
-                    <p>Django is designed to handle high traffic and can be scaled to meet the demands of growing applications.</p>
-                </div>
+{% block content %}
+<main>
+    <section id="hero">
+        <h2>Discover the Power of Django</h2>
+        <p>Build robust and scalable web applications with the Django framework.</p>
+        <a href="#" class="button">Learn More</a>
+    </section>
+
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <h3>Rapid Development</h3>
+                <p>Django's design philosophy emphasizes reusability and "don't repeat yourself" (DRY) principles, leading to faster development cycles.</p>
             </div>
-        </section>
+            <div class="feature">
+                <h3>Batteries Included</h3>
+                <p>Django comes with a lot of built-in features, such as an ORM, admin interface, and templating engine, making it ready for many common web development tasks.</p>
+            </div>
+            <div class="feature">
+                <h3>Security Focused</h3>
+                <p>Django helps developers avoid many common security mistakes by providing built-in protection against threats like cross-site scripting (XSS) and SQL injection.</p>
+            </div>
+            <div class="feature">
+                <h3>Scalability</h3>
+                <p>Django is designed to handle high traffic and can be scaled to meet the demands of growing applications.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="mvt-explanation">
-            <h2>Django and the MVT Architecture</h2>
-            <p>As mentioned earlier, Django follows the Model-View-Template (MVT) architectural pattern. Here's a brief overview:</p>
-            <ul>
-                <li><strong>Model:</strong> Handles the data logic. It interacts with the database to manage and retrieve data.</li>
-                <li><strong>View:</strong> Contains the application's logic. It receives requests from the user, interacts with the Model to get the necessary data, and then passes that data to the Template.</li>
-                <li><strong>Template:</strong> A presentation layer that defines how the data will be displayed to the user. It uses placeholders to dynamically insert data passed by the View.</li>
-            </ul>
-            <p>This separation of concerns makes the development process more organized and maintainable.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 My Django Project. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    <section id="mvt-explanation">
+        <h2>Django and the MVT Architecture</h2>
+        <p>As mentioned earlier, Django follows the Model-View-Template (MVT) architectural pattern. Here's a brief overview:</p>
+        <ul>
+            <li><strong>Model:</strong> Handles the data logic. It interacts with the database to manage and retrieve data.</li>
+            <li><strong>View:</strong> Contains the application's logic. It receives requests from the user, interacts with the Model to get the necessary data, and then passes that data to the Template.</li>
+            <li><strong>Template:</strong> A presentation layer that defines how the data will be displayed to the user. It uses placeholders to dynamically insert data passed by the View.</li>
+        </ul>
+        <p>This separation of concerns makes the development process more organized and maintainable.</p>
+    </section>
+</main>
+{% endblock %}

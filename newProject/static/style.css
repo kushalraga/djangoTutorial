@@ -145,3 +145,42 @@ form textarea {
 form button[type="submit"] {
     margin-top: 15px;
 }
+
+#app-installed {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+#app-installed h2 {
+    color: #2e7d32; /* A green color for success */
+    margin-bottom: 15px;
+}
+
+#app-installed p {
+    margin-bottom: 10px;
+}
+
+#app-installed ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.call-to-action {
+    margin-top: 20px;
+}
+
+.call-to-action a {
+    margin: 0 10px;
+}
+
+.admin-button {
+    background-color: #1976d2; /* A blue color for admin */
+}
+
+.admin-button:hover {
+    background-color: #1565c0;
+}

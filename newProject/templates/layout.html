@@ -1,3 +1,4 @@
+{% load static tailwind_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,16 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %} Default Title {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'style.css' %}" />
+    {% tailwind_css %}
   </head>
   <body>
     <header>
-      <h1>Welcome to My Django Project!</h1>
+      <h1 class='text-2xl text-orange-400 px-3 py-5' >Welcome to My Django Project!</h1>
       <nav>
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'contact' %}">Contact</a></li>
-          <li><a href="{% url 'newapp' %}">New App</a></li>
+          <li><a href="{% url 'newapp' %}">Our Team</a></li>
+          <li><a href="{% url 'services' %}">Our Services</a></li>
         </ul>
       </nav>
     </header>

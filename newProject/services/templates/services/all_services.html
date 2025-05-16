@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}Our Services{% endblock %}
+{% block content %}
+<main class="py-8 bg-gray-100">
+    <section class="container mx-auto px-4">
+        <h1 class="text-3xl font-bold text-gray-800 text-center mb-8">Our Services</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% for service in services %}
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
+                {% if service.service_img %}
+                <img src="{{service.service_img.url}}" alt="{{service.name }}" class="w-32 h-32 rounded-full object-cover mb-4">
+                {% else %}
+                    <div class="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 mb-4">
+                        No Image
+                    </div>
+                {% endif %}
+                <h2 class="text-xl font-semibold text-blue-600 mb-2 text-center">{{ service.name }}</h2>
+                <p class="text-gray-700 text-sm text-center mb-4">{{ service.description|truncatechars:100|default:"" }}</p>
+                <a href="{% url 'single_service' service.id %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    <button>View More</button>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}
